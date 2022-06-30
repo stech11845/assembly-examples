@@ -1,25 +1,6 @@
 	CODE32
 
 	EXPORT	|CrcUpdateT4@16|-UPDATEKIND
-
-	AREA	|.text|, CODE, ARM
-
-	MACRO
-	CRC32_STEP_1
-
-	ldrb    r4, [r1], #1
-	subs    r2, r2, #1
-	eor     r4, r4, r0
-	and     r4, r4, #0xFF
-	ldr     r4, [r3, +r4, lsl #2]
-	eor     r0, r4, r0, lsr #8
-
-	MEND
-
-
-	MACRO
-	CRC32_STEP_4 $STREAM_WORD
-	
 	eor     r7, r7, r8
 	eor     r7, r7, r9
 	eor     r0, r0, r7
