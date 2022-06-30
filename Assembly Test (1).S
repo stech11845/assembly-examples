@@ -1,6 +1,4 @@
-// 7zAsm.S -- ASM macros for arm64
-// 2021-04-25 : Igor Pavlov : Public domain
-
+// Assembly Test -- ASM macros for arm64
 #define  r0 x0
 #define  r1 x1
 #define  r2 x2
